@@ -8,9 +8,11 @@ if(isNaN(eta_utente)){
 }
 var tariffa = 0.21;
 var costo = km_utente * tariffa;
-var percentuale = costo / 100;
-var under = percentuale * 20;
-var over = percentuale * 40;
+//var percentuale = costo / 100;
+//var under = percentuale *20
+//var over = percentuale *40
+var under = (costo / 100) * 20;
+var over = (costo / 100)* 40;
 
 if(eta_utente <18){
     document.getElementById('biglietto').innerHTML = "Il prezzo del biglietto è di: " + costo.toFixed(2)  + "€" +" per te riservato con sconto del 20% a: " + (costo - under).toFixed(2) + "€";
